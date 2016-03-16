@@ -1,0 +1,43 @@
+<div id="subscriptionForm">
+    <h2>Newsletter Subscription</h2>
+    <div id="msg"></div>
+    <div id="loading" ng-show="display">Loading...</div>
+    <form name="subscription" ng-submit="subscription.$valid && submit(subscription)" novalidate>
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset class="form-group">
+                    <input type="text" class="form-control" name="firstName" id="firstName" required ng-model="firstName" placeholder="First Name">
+
+                    <span class="validation-error" ng-show="subscription.$submitted && subscription.firstName.$invalid">The first name is required.</span>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset class="form-group">
+                    <input type="text" class="form-control" name="lastName" id="lastName" required ng-model="lastName" placeholder="Last Name">
+                    <span class="validation-error" ng-show="subscription.$submitted && subscription.lastName.$invalid">The last name is required.</span>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset class="form-group">
+                    <input type="email" class="form-control" name="email" id="email" required ng-model="email" placeholder="Email">
+                    <span class="validation-error" ng-show="subscription.$submitted && subscription.email.$invalid">The valid email is required.</span>
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                <fieldset class="form-group">
+                    <button type="submit" ng-disabled="isDisabled" class="btn btn-primary">Subscribe</button>
+                </fieldset>
+            </div>
+        </div>
+
+    </form>
+</div>
