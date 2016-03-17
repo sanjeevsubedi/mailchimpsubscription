@@ -31,7 +31,8 @@ body {
 
 .validation-error {
   display: block;
-  padding: 2px 0 0; }
+  padding: 2px 0 0;
+  color: red; }
 
 #msg, #loading {
   margin: 10px 0;
